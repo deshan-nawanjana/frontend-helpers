@@ -81,11 +81,11 @@
             // continue if included
             if(elements.flex.some(x => x.target === elem)) { continue }
             // add flex node class
-            elem.classList.add('_flex_node')
+            elem.classList.add('_fx')
             // push to elements
             elements.flex.push({
                 target : elem,
-                class : '_flex_node',
+                class : '_fx',
                 attributes : {
                     cols : fetchAttrs(elem, 'cols'),
                     rows : fetchAttrs(elem, 'rows'),
@@ -141,7 +141,7 @@
             // get attribute keys
             const akeys = Object.keys(atrs)
             // array of classes
-            const clarr = ['_flex_node']
+            const clarr = ['_fx']
             // for each key
             for(let a = 0; a < akeys.length; a++) {
                 // current key
@@ -153,24 +153,24 @@
                 // check key type
                 if(key !== 'visible') {
                     // push to class array
-                    if(check) { clarr.push('flex_' + key) }
+                    if(check) { clarr.push(key[0]) }
                 } else {
                     // check match
                     if(check) {
                         // show element
-                        elem.classList.remove('_flex_hidden')
+                        elem.classList.remove('_fxh')
                     } else {
                         // hide element
-                        elem.classList.add('_flex_hidden')
+                        elem.classList.add('_fxh')
                     }
                 }
             }
             // remove previous class
             elem.classList.remove(elements.flex[i].class)
             // set current class
-            elem.classList.add(clarr.join('_'))
+            elem.classList.add(clarr.join(''))
             // remember current class
-            elements.flex[i].class = clarr.join('_')
+            elements.flex[i].class = clarr.join('')
         }
 
         // for each style element

@@ -1,13 +1,22 @@
+/* hidden by default */
 flex { display: none; }
 
-._flex_node { display: block; }
+/* initialized element */
+._fx { display: block; }
 
-._flex_node_flex_cols { display: flex; flex-direction: column; }
-._flex_node_flex_cols_flex_reverse { display: flex; flex-direction: column-reverse; }
-._flex_node_flex_cols > * { width: auto; height: 100%; }
+/* vertical container */
+._fxc { display: flex; flex-direction: column; }
+/* vertical reversed container */
+._fxcr { display: flex; flex-direction: column-reverse; }
+/* vertical children */
+._fxc > * { width: auto; height: 100%; }
 
-._flex_node_flex_rows { display: flex; flex-direction: row; }
-._flex_node_flex_rows_flex_reverse { flex-direction: row-reverse; }
-._flex_node_flex_rows > * { width: 100%; height: auto; }
+/* horizontal container */
+._fxr { display: flex; flex-direction: row; }
+/* horizontal reversed container */
+._fxrr { flex-direction: row-reverse; }
+/* horizontal children */
+._fxr > * { width: 100%; height: auto; }
 
-._flex_hidden { display: none; }
+/* hidden element */
+._fxh { display: none; }
