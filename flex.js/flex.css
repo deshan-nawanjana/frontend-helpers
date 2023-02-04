@@ -1,0 +1,13 @@
+flex { display: none; }
+
+._flex_node { display: block; }
+
+._flex_node_flex_cols { display: flex; flex-direction: column; }
+._flex_node_flex_cols_flex_reverse { display: flex; flex-direction: column-reverse; }
+._flex_node_flex_cols > * { width: auto; height: 100%; }
+
+._flex_node_flex_rows { display: flex; flex-direction: row; }
+._flex_node_flex_rows_flex_reverse { flex-direction: row-reverse; }
+._flex_node_flex_rows > * { width: 100%; height: auto; }
+
+._flex_hidden { display: none; }
