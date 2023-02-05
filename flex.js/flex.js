@@ -73,11 +73,13 @@
     // flex callback
     const Flex = () => {
         // get all flex elements
-        const list_flx = document.querySelectorAll('flex')
+        const list_flx = document.querySelectorAll('flex, :not(flex):not(style):not(link)[flex]')
         // for each flex element
         for(let i = 0; i < list_flx.length; i++) {
             // current element
             const elem = list_flx[i]
+            // remove flex attribute
+            elem.removeAttribute('flex')
             // continue if included
             if(elements.flex.some(x => x.target === elem)) { continue }
             // add flex node class

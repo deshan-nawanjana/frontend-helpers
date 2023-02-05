@@ -1,6 +1,9 @@
 /* hidden by default */
 flex { display: none; }
 
+/* hidden custom element by default */
+:not(flex):not(style):not(link)[flex] { display: none; }
+
 /* initialized element */
 ._fx { display: block; }
 
